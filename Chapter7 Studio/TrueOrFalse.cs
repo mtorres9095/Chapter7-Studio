@@ -7,11 +7,11 @@ namespace Chapter7_Studio
    public class TrueOrFalse : Question
 
     {
-        public bool CorrectAnswer { get; set; }
+        private bool CorrectAnswer { get; set; }
     }
     public TrueOrFalse (bool trueOrFalse)
     {
-    TrueOrFalse = trueOrFalse
+        TrueOrFalse = trueOrFalse
     }
     public override void GetAnswers()
     {
