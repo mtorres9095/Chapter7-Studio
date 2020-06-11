@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Chapter7_Studio
 {
-    class Question
+    public abstract class Question
     {
 {
         public string QuestionText { get; set; }
@@ -14,13 +14,11 @@ namespace Chapter7_Studio
         {
             QuestionText = questionText;
             PointValue = pointValue;
-            
         }
 
-        public void DisplayQuestion()
-        {
-            
-        }
+        public abstract void DisplayQuestion();
+        public abstract void DisplayChoices();
+        public abstract void GetAnswers();
 
         //public void RetestUpdate(bool size)
         //{
