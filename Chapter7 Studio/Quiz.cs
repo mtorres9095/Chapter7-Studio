@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Chapter7_Studio
+namespace Ch7_Studio
 {
-    class Quiz
+    public class Quiz
     {
+
         public List<Question> Questions { get; set; }
-        public int Score { get; set; } 
-        private int Total { get; set; } 
+        public int Score { get; set; } // user score in quiz
+        private int Total { get; set; } // total points for quiz
 
         public Quiz(List<Question> questions)
         {

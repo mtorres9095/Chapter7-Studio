@@ -1,25 +1,26 @@
 ﻿using System;
-
-namespace Chapter7_Studio
+namespace Ch7_Studio
 {
     public abstract class Question
     {
-        public string QuestionText { get; set; }
+        public string Text { get; set; }
         public int PointValue { get; set; }
-        
-        protected Question(string questionText, int pointValue)
+
+        protected Question(string text, int pointValue)
         {
-            QuestionText = questionText;
+            Text = text;
             PointValue = pointValue;
         }
 
         public void DisplayQuestion()
         {
-          Console.WriteLine(QuestionText);
+            Console.WriteLine(Text);
         }
-        public abstract void DisplayAnswers();
-        public abstract void GetAnswers(); 
-    }
 
+        public abstract void DisplayAnswers();
+
+        public abstract int GetAnswers();
+    }
 }
+
 

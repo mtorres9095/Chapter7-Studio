@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-
-namespace Chapter7_Studio
+namespace Ch7_Studio
 {
     class Program
     {
@@ -28,7 +27,6 @@ namespace Chapter7_Studio
             myQuiz.RunQuiz();
 
             myQuiz.GradeQuiz();
-
         }
     }
 }

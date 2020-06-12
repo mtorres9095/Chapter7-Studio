@@ -1,34 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Chapter7_Studio
+namespace Ch7_Studio
 {
     public class CheckBox : Question
     {
         public List<string> PossibleAnswers { get; set; }
-        private List<int> CorrectAnswers { get; set;}
+        private List<int> CorrectAnswers { get; set; }
 
-        public CheckBox(string questionText, int pointValue, List<string> possibleAnswers, List<int> correctAnswers) : base(questionText, pointValue)
+        public CheckBox(string text, int pointValue, List<string> possibleAnswers, List<int> correctAnswers) : base(text, pointValue)
         {
             PossibleAnswers = possibleAnswers;
             CorrectAnswers = correctAnswers;
         }
-        public void ShowAnswers()
+
+        public override void DisplayAnswers()
         {
             foreach (string possibleAnswer in PossibleAnswers)
             {
                 Console.WriteLine(possibleAnswer);
             }
         }
+
         public override int GetAnswers()
         {
             List<int> userAnswers = new List<int>();
             string userInput;
-            Console.WriteLine("Select the best answer (could have multiple correct answers) (Write the answer number or ENTER stop)");
-            
+
+
+            Console.WriteLine("This question could have multiple correct answers (Write the answer number or ENTER stop)");
+
             do
             {
-                Console.WriteLine("Write your answer: ");
+                Console.WriteLine("Your Answer: ");
                 userInput = Console.ReadLine();
 
                 if (userInput != "")
@@ -58,6 +62,8 @@ namespace Chapter7_Studio
             return answeredCorrectly;
         }
     }
+
 }
-   
+
+
 

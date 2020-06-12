@@ -1,10 +1,7 @@
 ﻿using System;
-
-
-namespace Chapter7_Studio
+namespace Ch7_Studio
 {
     public class TrueOrFalse : Question
-
     {
         private bool CorrectAnswer { get; set; }
 
@@ -44,5 +41,6 @@ namespace Chapter7_Studio
 
             return 0;
         }
-    }  
+    }
+
 }
