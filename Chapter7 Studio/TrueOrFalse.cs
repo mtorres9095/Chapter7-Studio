@@ -1,22 +1,48 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace Chapter7_Studio
 {
-   public class TrueOrFalse : Question
+    public class TrueOrFalse : Question
 
     {
         private bool CorrectAnswer { get; set; }
-    }
-    public TrueOrFalse (bool trueOrFalse)
-    {
-        TrueOrFalse = trueOrFalse
-    }
-    public override void GetAnswers()
-    {
-        Console.WriteLine("1. John 2. Mary... What you name");
-    }
 
+        public TrueOrFalse(string text, int pointValue, bool correctAnswer) : base(text, pointValue)
+        {
+            CorrectAnswer = correctAnswer;
+        }
 
+        public override void DisplayAnswers()
+        {
+            Console.WriteLine("True / False");
+        }
+
+        public override int GetAnswers()
+        {
+            Console.WriteLine("Enter 't'/'T' for True, 'f'/'F' for False :");
+
+            string userAnswer = Console.ReadLine().ToLower();
+
+            if (userAnswer == "t")
+            {
+                if (CorrectAnswer == true)
+                {
+                    return 1;
+                }
+                return 0;
+            }
+
+            if (userAnswer == "f")
+            {
+                if (CorrectAnswer == false)
+                {
+                    return 1;
+                }
+                return 0;
+            }
+
+            return 0;
+        }
+    }  
 }
